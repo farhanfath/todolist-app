@@ -4,7 +4,7 @@ class Todo {
   bool isDone;
 
   Todo({
-    required this.id,
+    required this.id, 
     required this.todoText,
     this.isDone = false,
   });

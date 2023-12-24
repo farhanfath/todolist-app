@@ -331,7 +331,7 @@ class ProfilePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     CircleAvatar(
-                      backgroundImage: AssetImage('assets/images/ME2.jpg'),
+                      backgroundImage: AssetImage('assets/images/My lofi.png'),
                       radius: 50.0,
                     ),
                     SizedBox(
