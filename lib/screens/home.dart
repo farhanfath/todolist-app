@@ -27,10 +27,12 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: tdBGColor,
       appBar: _buildAppBar(),
       drawer: _buildDrawer(),
-      body: Stack(
+      body: 
+      Stack(
         children: [
           Container(
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
@@ -314,7 +316,8 @@ class ProfilePage extends StatelessWidget {
         ),
       ),
       backgroundColor: tdBGColor,
-      body: Column(
+      body: SingleChildScrollView(
+       child: Column(
         children: <Widget>[
           Container(
             decoration: BoxDecoration(
@@ -484,6 +487,7 @@ class ProfilePage extends StatelessWidget {
             height: 20.0,
           ),
         ],
+      ),
       ),
     );
   }

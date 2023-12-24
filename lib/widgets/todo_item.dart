@@ -14,13 +14,17 @@ class ToDoItem extends StatelessWidget {
     required this.onDeleteItem,
   }) : super(key: key);
 
-  @override
+    @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+
+    // Menentukan ukuran ikon delete berdasarkan lebar layar
+    double iconSize = screenWidth > 600 ? 24 : 18;
+
     return Container(
       margin: EdgeInsets.only(bottom: 20),
       child: ListTile(
         onTap: () {
-          // print('Clicked on Todo Item');
           onToDoChanged(todo);
         },
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
@@ -48,11 +52,12 @@ class ToDoItem extends StatelessWidget {
             borderRadius: BorderRadius.circular(5),
           ),
           child: IconButton(
+            padding: EdgeInsets.all(0), // Menghilangkan padding bawaan dari IconButton
+            constraints: BoxConstraints(maxHeight: 35, maxWidth: 35), // Menentukan batasan maksimum tinggi dan lebar
             color: Colors.white,
-            iconSize: 18,
+            iconSize: iconSize,
             icon: Icon(Icons.delete),
             onPressed: () {
-              // print('Clicked on delete icon');
               onDeleteItem(todo.id);
             },
           ),
