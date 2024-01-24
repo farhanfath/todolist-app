@@ -8,7 +8,7 @@ Aplikasi untuk mendata kegiatan sehari - hari
 ToDoList Application - Project Dicoding Submission (membuat aplikasi flutter untuk pemula) 
 
 ## Demo
-<img src="https://github.com/farhanfath/todolist-app/blob/main/demo/demo.gif" width="48">
+<img src="https://github.com/farhanfath/todolist-app/blob/main/demo/demo.gif" width="100">
 
 
 
